@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" xmlns="http://www.w3.org/1999/html">
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
@@ -24,22 +24,64 @@
     заслуживающий большего!</h1>
   <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
   <!--Здесь будет сетка причин почему стоит приехать в Седону-->
-  <section class="booking-form">
+  <section class="booking">
     <h2>Заинтересовались?</h2>
     <p>Укажите предполагаемые даты поездки,
       и мы покажем вам лучшие предложения гостиниц в седоне</p>
+    <form class="booking-form" action="https://echo.htmlacademy.ru" method="post">
+      <p><b>Поиск гостиниц в Седоне</b></p>
+      <p class="booking-item">
+        <label>
+          Дата заезда:
+        <input type="text" name="check-in-date" value="" placeholder="24 апреля 2017">
+          <button type="button">Календарь</button>
+          </label>
+      </p>
+      <p class="booking-item">
+        <label>
+          Дата выезда:
+          <input type="text" name="check-out-date" value="" placeholder="4 июля 2017">
+          <button type="button">Календарь</button>
+        </label>
+      </p>
+      <p class="booking-item">
+        <label>
+          Взрослые:
+          <button class="control_btn btn-reduce" type="button" onclick="this.nextElementSibling.stepDown()" aria-label="уменьшить">
+            Минус
+          </button>
+          <input type="number" name="adults" readonly class="control-count" min="1" max="9" value="" placeholder="2">
+          <button class="control_btn btn-increase" type="button" onclick="this.previousElementSibling.stepUp()" aria-label="добавить">
+            Плюс
+          </button>
+        </label>
+      </p>
+      <p class="booking-item">
+        <label>
+          Дети:
+          <button class="control_btn btn-reduce" type="button" onclick="this.nextElementSibling.stepDown()" aria-label="уменьшить">
+            Минус
+          </button>
+          <input type="number"  name="children" readonly class="control-count" min="0" max="9" value="" placeholder="0">
+          <button class="control_btn btn-increase" type="button" onclick="this.previousElementSibling.stepUp()" aria-label="добавить">
+            Плюс
+          </button>
+        </label>
+      </p>
+      <button class="button" type="submit">Найти</button>
+    </form>
   </section>
   <img src="img/map.jpg" width="1200" height="593"  alt="карта">
 </main>
 <footer class="main-footer">
   <div class="instagram">
-    <a href="https://www.instagram.com/explore/tags/visitsedona" class="hashtag" target="_blank">#VISITSEDONA</a>
+    <a href="https://www.instagram.com/explore/tags/visitsedona" class="hashtag" target="_blank" aria-label="Фотографии из Седоны в инстаграме">#VISITSEDONA</a>
   </div>
   <div class="social-footer">
     <ul>
-      <li><a class="social-button" href="#">Вконтакте</a></li>
-      <li><a class="social-button" href="#">Фейсбук</a></li>
-      <li><a class="social-button" href="#">Youtube</a></li>
+      <li><a class="social-button" href="#" aria-label="Группа сайта во вконтакте ">Вконтакте</a></li>
+      <li><a class="social-button" href="#" aria-label="Стриница сайта в Фейсбуке ">Фейсбук</a></li>
+      <li><a class="social-button" href="#" aria-label="Канал сайта в Ютубе ">Youtube</a></li>
     </ul>
   </div>
   <p class="footer-copyright">
