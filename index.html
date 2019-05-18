@@ -31,42 +31,44 @@
     <form class="booking-form" action="https://echo.htmlacademy.ru" method="post">
       <p><b>Поиск гостиниц в Седоне</b></p>
       <p class="booking-item">
-        <label>
+        <label for="check-in-date">
           Дата заезда:
-        <input type="text" name="check-in-date" value="" placeholder="24 апреля 2017">
+        </label>
+        <input type="text" name="check-in-date" id="check-in-date" value="" placeholder="24 апреля 2017">
           <button type="button">Календарь</button>
-          </label>
+
       </p>
       <p class="booking-item">
-        <label>
+        <label for="check-out-date">
           Дата выезда:
-          <input type="text" name="check-out-date" value="" placeholder="4 июля 2017">
+        </label>
+          <input type="text" name="check-out-date" id="check-out-date" value="" placeholder="4 июля 2017">
           <button type="button">Календарь</button>
-        </label>
       </p>
       <p class="booking-item">
-        <label>
+        <label for="adults">
           Взрослые:
+        </label>
           <button class="control_btn btn-reduce" type="button" onclick="this.nextElementSibling.stepDown()" aria-label="уменьшить">
             Минус
           </button>
-          <input type="number" name="adults" readonly class="control-count" min="1" max="9" value="" placeholder="2">
+          <input type="number" name="adults" id="adults" readonly class="control-count" min="1" max="9" value="" placeholder="2">
           <button class="control_btn btn-increase" type="button" onclick="this.previousElementSibling.stepUp()" aria-label="добавить">
             Плюс
           </button>
-        </label>
+
       </p>
       <p class="booking-item">
-        <label>
+        <label for="children">
           Дети:
+        </label>
           <button class="control_btn btn-reduce" type="button" onclick="this.nextElementSibling.stepDown()" aria-label="уменьшить">
             Минус
           </button>
-          <input type="number"  name="children" readonly class="control-count" min="0" max="9" value="" placeholder="0">
+          <input type="number"  name="children" id="children" readonly class="control-count" min="0" max="9" value="" placeholder="0">
           <button class="control_btn btn-increase" type="button" onclick="this.previousElementSibling.stepUp()" aria-label="добавить">
             Плюс
           </button>
-        </label>
       </p>
       <button class="button" type="submit">Найти</button>
     </form>
