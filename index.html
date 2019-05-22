@@ -3,6 +3,9 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
 <header class="main-header">
@@ -19,23 +22,25 @@
   </nav>
 </header>
 <main>
-  <img src="http://placehold.it/150x100" alt="Welcome to Sedona">
-  <h1>Седона — небольшой городок в Аризоне,
+  <div class="promo">
+    <!--<img src="back.jpg" alt="Sedona-promo">-->
+  </div>
+  <h1 class="title">Седона — небольшой городок в Аризоне,<br>
     заслуживающий большего!</h1>
-  <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
-  <!--Здесь будет сетка причин почему стоит приехать в Седону-->
+  <p class="reasons">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+
   <section class="booking">
-    <h2>Заинтересовались?</h2>
-    <p>Укажите предполагаемые даты поездки,
+    <h2 class="booking-title">Заинтересовались?</h2>
+    <p class="booking-description">Укажите предполагаемые даты поездки,
       и мы покажем вам лучшие предложения гостиниц в седоне</p>
     <form class="booking-form" action="https://echo.htmlacademy.ru" method="post">
-      <p><b>Поиск гостиниц в Седоне</b></p>
+      <p class="booking-search"><b>Поиск гостиниц в Седоне</b></p>
       <p class="booking-item">
         <label for="check-in-date">
           Дата заезда:
         </label>
         <input type="text" name="check-in-date" id="check-in-date" value="" placeholder="24 апреля 2017">
-          <button type="button">Календарь</button>
+          <button type="button" class="calendar">Календарь</button>
 
       </p>
       <p class="booking-item">
@@ -43,7 +48,7 @@
           Дата выезда:
         </label>
           <input type="text" name="check-out-date" id="check-out-date" value="" placeholder="4 июля 2017">
-          <button type="button">Календарь</button>
+          <button type="button" class="calendar">Календарь</button>
       </p>
       <p class="booking-item">
         <label for="adults">
@@ -70,7 +75,7 @@
             Плюс
           </button>
       </p>
-      <button class="button" type="submit">Найти</button>
+      <button class="button search-button" type="submit">Найти</button>
     </form>
   </section>
   <img src="img/map.jpg" width="1200" height="593"  alt="карта">
@@ -81,9 +86,9 @@
   </div>
   <div class="social-footer">
     <ul>
-      <li><a class="social-button" href="#" aria-label="Группа сайта во вконтакте ">Вконтакте</a></li>
-      <li><a class="social-button" href="#" aria-label="Стриница сайта в Фейсбуке ">Фейсбук</a></li>
-      <li><a class="social-button" href="#" aria-label="Канал сайта в Ютубе ">Youtube</a></li>
+      <li><a class="button social-button" href="#" aria-label="Группа сайта во вконтакте ">Вконтакте</a></li>
+      <li><a class="button social-button" href="#" aria-label="Стриница сайта в Фейсбуке ">Фейсбук</a></li>
+      <li><a class="button social-button" href="#" aria-label="Канал сайта в Ютубе ">Youtube</a></li>
     </ul>
   </div>
   <p class="footer-copyright">
