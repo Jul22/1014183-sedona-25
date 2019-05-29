@@ -7,19 +7,24 @@
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
+
 <body>
 <header class="main-header">
   <nav class="main-navigation">
-    <a class="main-header-logo">
-      <img src="img/logo-sedona.svg" width="100" height="50" alt="Логотип сайта Седона">
+    <div class="main-header-logo">
+    <a>
+      <img src="img/logo-sedona.svg" width="140" height="72" alt="Логотип сайта Седона">
     </a>
+    </div>
     <ul class="site-navigation">
       <li><a href="#">Информация</a></li>
       <li><a href="#">Фото и видео</a></li>
+
       <li><a href="#">Карта штата</a></li>
       <li><a href="catalog.html">Гостиницы</a></li>
     </ul>
   </nav>
+
 </header>
 <main>
   <div class="promo">
@@ -30,30 +35,34 @@
   <p class="reasons">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
 
   <section class="booking">
-    <h2 class="booking-title">Заинтересовались?</h2>
-    <p class="booking-description">Укажите предполагаемые даты поездки,
+    <div class="booking-title">
+    <b>Заинтересовались?</b>
+      <p class="booking-description">Укажите предполагаемые даты поездки,<br>
       и мы покажем вам лучшие предложения гостиниц в седоне</p>
+    </div>
+    <div class="booking-wrap">
+      <h2 class="booking-search">Поиск гостиниц в Седоне</h2>
     <form class="booking-form" action="https://echo.htmlacademy.ru" method="post">
-      <p class="booking-search"><b>Поиск гостиниц в Седоне</b></p>
-      <p class="booking-item">
+      <div class="booking-field">
         <label for="check-in-date">
           Дата заезда:
         </label>
+      <div class="booking-item">
         <input type="text" name="check-in-date" id="check-in-date" value="" placeholder="24 апреля 2017">
           <button type="button" class="calendar">Календарь</button>
-
-      </p>
-      <p class="booking-item">
+      </div>
         <label for="check-out-date">
           Дата выезда:
         </label>
+      <div class="booking-item">
           <input type="text" name="check-out-date" id="check-out-date" value="" placeholder="4 июля 2017">
           <button type="button" class="calendar">Календарь</button>
-      </p>
-      <p class="booking-item">
-        <label for="adults">
+      </div>
+
+        <label for="adults" class="adults">
           Взрослые:
         </label>
+      <div class="booking-item-control">
           <button class="control-btn btn-reduce" type="button" onclick="this.nextElementSibling.stepDown()" aria-label="уменьшить">
             Минус
           </button>
@@ -61,12 +70,11 @@
           <button class="control-btn btn-increase" type="button" onclick="this.previousElementSibling.stepUp()" aria-label="добавить">
             Плюс
           </button>
-
-      </p>
-      <p class="booking-item">
-        <label for="children">
+      </div>
+        <label for="children" class="children">
           Дети:
         </label>
+      <div class="booking-item-control">
           <button class="control-btn btn-reduce" type="button" onclick="this.nextElementSibling.stepDown()" aria-label="уменьшить">
             Минус
           </button>
@@ -74,12 +82,15 @@
           <button class="control-btn btn-increase" type="button" onclick="this.previousElementSibling.stepUp()" aria-label="добавить">
             Плюс
           </button>
-      </p>
+      </div>
+      </div>
       <button class="button search-button" type="submit">Найти</button>
     </form>
+    </div>
+  <img src="img/map.jpg" width="1200" height="474"  alt="карта">
   </section>
-  <img src="img/map.jpg" width="1200" height="593"  alt="карта">
 </main>
+
 <footer class="main-footer">
   <div class="instagram">
     <a href="https://www.instagram.com/explore/tags/visitsedona" class="hashtag" target="_blank" aria-label="Фотографии из Седоны в инстаграме">#VISITSEDONA</a>
