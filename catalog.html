@@ -21,10 +21,9 @@
     </ul>
   </nav>
 </header>
-<main>
+<main class="characters">
   <!--Тут будет фильтр и сортировка-->
   <section class="hotels hotel-border-top">
-    <div class="hotel-wrap">
      <div class="hotel-photo">
       <a href="#">
       <img src="img/amara.jpg" width="135" height="90" alt="фотография отеля 1">
@@ -32,7 +31,7 @@
      </div>
     <div class="hotel-description">
       <h2 class="hotel-name"><a href="#">Amara Resort & Spa</a></h2>
-      <div>
+      <div class="wrap-one">
       <span class="hotel-information">Гостиница</span>
         <span class="price">От 4000 р.</span>
       </div>
@@ -45,11 +44,9 @@
       <div class="stars four-stars">4 звезды</div>
       <div class="rate">Рейтинг: 8,5</div>
       </div>
-    </div>
   </section>
 
   <section class="hotels">
-    <div class="hotel-wrap">
     <div class="hotel-photo">
       <a href="#">
       <img src="img/motel.jpg" width="135" height="90" alt="фотография отеля 2">
@@ -57,7 +54,7 @@
     </div>
     <div class="hotel-description">
       <h2 class="hotel-name"><a href="#">Desert Quail Inn</a></h2>
-      <div>
+      <div class="wrap-two">
       <span class="hotel-information">Мотель</span>
       <span class="price">От 3000 р.</span>
     </div>
@@ -70,11 +67,9 @@
       <div class="stars three-stars">3 звезды</div>
       <div class="rate">Рейтинг: 8,9</div>
     </div>
-    </div>
   </section>
 
   <section class="hotels">
-    <div class="hotel-wrap">
     <div class="hotel-photo">
       <a href="#">
       <img src="img/villa.jpg" width="135" height="90" alt="фотография отеля 3">
@@ -82,7 +77,7 @@
     </div>
     <div class="hotel-description">
       <h2 class="hotel-name"><a href="#">Villas At Poco Diablo</a></h2>
-      <div>
+      <div class="wrap-three">
       <span class="hotel-information">Апартаменты</span>
       <span class="price">От 2000 р.</span>
     </div>
@@ -95,19 +90,19 @@
       <div class="stars two-stars">2 звезды</div>
       <div class="rate">Рейтинг: 9,2</div>
         </div>
-    </div>
   </section>
 
 </main>
 <footer class="main-footer">
+
   <div class="instagram">
     <a href="https://www.instagram.com/explore/tags/visitsedona" class="hashtag" target="_blank" aria-label="Фотографии из Седоны в инстаграме">#VISITSEDONA</a>
   </div>
   <div class="social-footer">
-    <ul>
-      <li><a class="button social-button" href="#" aria-label="Группа сайта во вконтакте ">Вконтакте</a></li>
-      <li><a class="button social-button" href="#" aria-label="Стриница сайта в Фейсбуке ">Фейсбук</a></li>
-      <li><a class="button social-button" href="#" aria-label="Канал сайта в Ютубе ">Youtube</a></li>
+    <ul class="social-items">
+      <li><a class="button social-button" href="#" aria-label="Группа сайта во вконтакте"><span class="visually-hidden">Вконтакте</span></a></li>
+      <li><a class="button social-button" href="#" aria-label="Стриница сайта в Фейсбуке"><span class="visually-hidden">Фейсбук</span></a></li>
+      <li><a class="button social-button" href="#" aria-label="Канал сайта в Ютубе"><span class="visually-hidden">Youtube</span></a></li>
     </ul>
   </div>
   <p class="footer-copyright">
@@ -117,5 +112,6 @@
       HTML Academy
     </a>
   </p>
+
 </footer>
 </body>

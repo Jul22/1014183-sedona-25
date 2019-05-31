@@ -26,7 +26,7 @@
   </nav>
 
 </header>
-<main>
+<main class="characters">
   <div class="promo">
     <!--<img src="back.jpg" alt="Sedona-promo">-->
   </div>
@@ -43,44 +43,43 @@
     <div class="booking-wrap">
       <h2 class="booking-search">Поиск гостиниц в Седоне</h2>
     <form class="booking-form" action="https://echo.htmlacademy.ru" method="post">
-      <div class="booking-field">
+      <div class="booking-item">
         <label for="check-in-date">
           Дата заезда:
         </label>
-      <div class="booking-item">
         <input type="text" name="check-in-date" id="check-in-date" value="" placeholder="24 апреля 2017">
           <button type="button" class="calendar">Календарь</button>
       </div>
+      <div class="booking-item">
         <label for="check-out-date">
           Дата выезда:
         </label>
-      <div class="booking-item">
           <input type="text" name="check-out-date" id="check-out-date" value="" placeholder="4 июля 2017">
           <button type="button" class="calendar">Календарь</button>
       </div>
-
-        <label for="adults" class="adults">
+      <div class="booking-item">
+        <label for="adults" class="label-adults">
           Взрослые:
         </label>
-      <div class="booking-item-control">
+        <div class="booking-item-control">
           <button class="control-btn btn-reduce" type="button" onclick="this.nextElementSibling.stepDown()" aria-label="уменьшить">
-            Минус
+            <span class="visually-hidden">Минус</span>
           </button>
           <input type="number" name="adults" id="adults" readonly class="control-count" min="1" max="9" value="" placeholder="2">
           <button class="control-btn btn-increase" type="button" onclick="this.previousElementSibling.stepUp()" aria-label="добавить">
-            Плюс
+            <span class="visually-hidden">Плюс</span>
           </button>
       </div>
-        <label for="children" class="children">
+        <label for="children" class="label-children">
           Дети:
         </label>
       <div class="booking-item-control">
           <button class="control-btn btn-reduce" type="button" onclick="this.nextElementSibling.stepDown()" aria-label="уменьшить">
-            Минус
+            <span class="visually-hidden">Минус</span>
           </button>
           <input type="number"  name="children" id="children" readonly class="control-count" min="0" max="9" value="" placeholder="0">
           <button class="control-btn btn-increase" type="button" onclick="this.previousElementSibling.stepUp()" aria-label="добавить">
-            Плюс
+            <span class="visually-hidden">Плюс</span>
           </button>
       </div>
       </div>
@@ -96,10 +95,10 @@
     <a href="https://www.instagram.com/explore/tags/visitsedona" class="hashtag" target="_blank" aria-label="Фотографии из Седоны в инстаграме">#VISITSEDONA</a>
   </div>
   <div class="social-footer">
-    <ul>
-      <li><a class="button social-button" href="#" aria-label="Группа сайта во вконтакте ">Вконтакте</a></li>
-      <li><a class="button social-button" href="#" aria-label="Стриница сайта в Фейсбуке ">Фейсбук</a></li>
-      <li><a class="button social-button" href="#" aria-label="Канал сайта в Ютубе ">Youtube</a></li>
+    <ul class="social-items">
+      <li><a class="button social-button" href="#" aria-label="Группа сайта во вконтакте"><span class="visually-hidden">Вконтакте</span></a></li>
+      <li><a class="button social-button" href="#" aria-label="Стриница сайта в Фейсбуке"><span class="visually-hidden">Фейсбук</span></a></li>
+      <li><a class="button social-button" href="#" aria-label="Канал сайта в Ютубе"><span class="visually-hidden">Youtube</span></a></li>
     </ul>
   </div>
   <p class="footer-copyright">
