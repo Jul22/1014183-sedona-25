@@ -13,7 +13,10 @@ img {
   max-width: 100%;
   height: auto;
 }
+
 .visually-hidden:not(:focus):not(:active){
+  position: absolute;
+
   width: 1px;
   height: 1px;
   margin: -1px;
@@ -27,6 +30,12 @@ img {
   overflow: hidden;
 }
 
+.main-header {
+  min-height: 56px;
+  padding: 0;
+  position: relative;
+}
+
 .characters,
 .main-header {
   margin: 0 auto;
@@ -36,7 +45,6 @@ img {
 
 .main-navigation {
   width: 100%;
-  min-height: 56px;
 
   color: #000000;
   font-weight: bold;
@@ -44,28 +52,50 @@ img {
 }
 
 .main-header-logo {
+  display: block;
   width: 140px;
   height: 72px;
   background: transparent;
+  position:absolute;
+  top: 0;
+  left: 530px;
+  z-index: 1;
 }
 
 .site-navigation {
-  list-style: none;
-  height: 56px;
-  width: 1056px;
+  margin: 0 73px;
+  padding: 0;
 
   display: flex;
-  align-items: center;
   flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 0 73px;
+
+  list-style: none;
+
   outline: 1px solid orangered;
 }
 
 .site-navigation a {
   display: block;
-  padding: 24px 0;
+  padding: 15px 0;
   color: #000000;
+}
+
+.site-navigation li {
+  display: block;
+  width: 241px;
+
+  outline: 1px solid red;
+}
+
+.site-navigation li:nth-child(2){
+  flex-grow: 1;
+
+  outline: 2px solid green;
+}
+
+.site-navigation li:nth-child(3),
+.site-navigation li:nth-child(4) {
+  text-align: right;
 }
 
 .site-navigation a:hover {
@@ -287,11 +317,11 @@ img {
 }
 /* Футер */
 .main-footer {
-
-  width: auto;
+  width: 1200px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
-  outline: 1px solid forestgreen;
+  /*outline: 1px solid forestgreen;*/
 
 }
 
@@ -299,15 +329,16 @@ img {
   width: 328px;
   outline: 1px solid mediumvioletred;
   margin-left: 73px;
-  /*align-self: center;
-  margin-top: 10px;*/
+  margin-top: 49px;
 }
+
 .hashtag {
   color: #000000;
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
 }
+
 .social-footer {
   text-align: center;
   min-width: 489px;
@@ -316,13 +347,13 @@ img {
 }
 
 .social-items {
+  padding: 0;
+  margin-left: 123px;
+  margin-top: 36px;
+
   display: flex;
 
   outline: yellow;
-}
-
-.social-items li:first-child {
-  margin-left: 213px;
 }
 
 .social-button {
@@ -333,7 +364,7 @@ img {
 
 .social-items a {
   display: block;
-  margin: 3px;
+  margin-right: 6px;
   width: 46px;
   height: 48px;
 }
@@ -342,6 +373,8 @@ img {
   text-align: right;
   width: 241px;
   margin-right: 73px;
+  margin-top: 39px;
+
   outline: 1px solid darkred;
 }
 
@@ -373,7 +406,23 @@ img {
   color: #d9d9d9;
 }
 
+.tw {
+  background-image: url("../img/twitter.svg");
+  background-repeat: no-repeat;
+  background-position: 15px 15px;
+}
 
+.facebook {
+  background-image: url("../img/fb-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 17px 12px;
+}
+
+.youtube {
+  background-image: url("../img/youtube.svg");
+  background-repeat: no-repeat;
+  background-position: 13px 16px;
+}
 /* Отели сетка*/
 
 .hotel-border-top {
@@ -410,22 +459,16 @@ img {
 
 .hotel-information {
   display: inline-block;
-  margin-top: 10px;
-}
-/* Я пока придумала только такой костыльный способ отодвинуть спаны с ценой*/
-.wrap-one .price {
-  margin-left: 40px;
-}
-.wrap-two .price {
-  margin-left: 62px;
+  margin-top: 4px;
+  width: 110px;
 }
 
-.wrap-three .price {
-  margin-left: 20px;
+.price {
+  margin-left: 6px;
 }
-
 
 .booking-btn-control {
+  display: inline-block;
   padding: 7px 16px;
   text-align: center;
   font-weight: bold;
