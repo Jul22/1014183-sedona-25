@@ -4,8 +4,16 @@ body {
   line-height: 26px;
   text-transform: uppercase;
   background-color: #f2f2f2;
-  box-shadow: 0 0 14px 5px #dbdbdb;
 }
+
+.content-container {
+  width: 1200px;
+  margin: 0 auto;
+  background: #ffffff;
+  -webkit-box-shadow: 0 0 16px 3px #cbc9c9;
+  box-shadow: 0 0 16px 3px #cbc9c9;;
+}
+
 
 a {
   text-decoration: none;
@@ -26,6 +34,7 @@ img {
 
   white-space: nowrap;
 
+
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
@@ -34,7 +43,6 @@ img {
 
 
 .main-header {
-  min-height: 56px;
   padding: 0;
   position: relative;
 }
@@ -62,16 +70,20 @@ img {
   background: transparent;
   top: 0;
   left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
   transform: translateX(-50%);
   position:absolute;
   z-index: 2;
 }
 
 .site-navigation {
-  padding: 0;
-  width: 1058px;
+  padding: 0 73px;
   margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 
   list-style: none;
@@ -81,12 +93,11 @@ img {
 
 .site-navigation a {
   display: block;
-  padding: 15px 0;
   color: #000000;
 }
 
 .site-navigation li {
-  display: block;
+  padding: 15px 0;
   width: 241px;
 
   outline: 1px solid red;
@@ -125,9 +136,11 @@ img {
   background-color: gray;
   background-repeat:  no-repeat, no-repeat;
   background-size: 458px 352px, cover;
-  background-position: 370px 75px, 100% 21%;
+  background-position: 373px 77px, 100% 21%;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   position: relative;
+  margin-bottom: 58px;
 }
 
 .promo-bottom {
@@ -138,26 +151,118 @@ img {
   background-position: bottom;
   width: 1200px;
   height: 59px;
-  top: 452px;
+  top: 453px;
 }
+
 
 .title {
   text-align: center;
   font-size: 21px;
-  padding-top: 50px;
+  padding: 0 338px 0 340px;
+  margin: 30px;
 }
 
 .reasons {
   text-align: center;
-  padding-top: 35px;
+  margin-top: 30px;
+  margin-bottom: 50px;
 }
+
+/* Первый ряд*/
+
+.first-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-image: url(../img/banner1.jpg);
+  background-repeat: no-repeat;
+  background-position: right;
+  min-height: 256px;
+}
+
+.reason-first {
+  background-color: #81b3d2;
+  color: #ffffff;
+  padding: 46px 60px 64px;
+  text-align: center;
+  height: 256px;
+  display: block;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 400px;
+}
+
+/* Второй ряд */
+.features {
+  height: 330px; /*Временно*/
+}
+
+.features-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+}
+
+.features-list li {
+  width: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* Третий ряд*/
+
+.second-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  background-image: url("../img/banner2.jpg");
+  background-repeat: no-repeat;
+  background-position: left;
+  min-height: 256px;
+}
+
+.reason-second {
+  background-color: #81b3d2;
+  color: #ffffff;
+  padding: 46px 60px 64px;
+  text-align: center;
+  height: 256px;
+  display: block;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 400px;
+
+}
+
+.last-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 256px;              /*Временоно*/
+  background-color: #eee;
+}
+
+
 
 /* Форма */
 .booking {
-  padding-top: 57px;
+  padding-top: 52px;
   width: auto;
   background-color: #ffffff;
-
 }
 
 .booking-title {
@@ -187,6 +292,7 @@ img {
 
 .booking-search {
   margin: 0 auto;
+  margin-top: 45px;
   padding: 30px 0;
   display: block;
   position: relative;
@@ -202,24 +308,29 @@ img {
 .booking-form {
   position: absolute;
   padding: 55px;
-  width: 460px;
+  width: 568px;
   background-color: #ffffff;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 396px;
 
   outline: 1px solid crimson;
 }
 
 .booking-item {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   padding: 10px 0;
 
   outline: 1px solid green;
 }
 
 .booking-item label {
-  width: 115px;
+  width: 113px;
   font-weight: bold;
   text-align: center;
   vertical-align: middle;
@@ -235,10 +346,13 @@ img {
   border: none;
   color: #000000;
   text-transform: uppercase;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 345px;
 }
 .booking-item input {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
 
 }
@@ -267,6 +381,8 @@ img {
 .calendar svg {
   fill: #cacaca;
   position: absolute;
+  -webkit-transform: translate(-11px, -12px);
+  -ms-transform: translate(-11px, -12px);
   transform: translate(-11px, -12px);
 }
 
@@ -280,12 +396,16 @@ img {
 
 
 .booking-item-control {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   outline: 1px solid dodgerblue;
   position: relative;
 }
 
 .booking-item input {
+  -webkit-box-flex: 0;
+  -ms-flex-positive: 0;
   flex-grow: 0;
 }
 .control-count {
@@ -341,6 +461,7 @@ img {
 
   top: 50%;
   left: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
   transform: translate3d(-50%, -50%, 0);
   width: 12px;
   height: 3px;
@@ -354,6 +475,7 @@ img {
 
   top: 50%;
   left: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
   transform: translate3d(-50%, -50%, 0);
   width: 3px;
   height: 12px;
@@ -434,7 +556,11 @@ img {
 .main-footer {
   width: 1200px;
   margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   background-color: #ffffff;
   /*outline: 1px solid forestgreen;*/
@@ -458,6 +584,8 @@ img {
 .social-footer {
   text-align: center;
   min-width: 489px;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
   outline: 1px solid palevioletred;
 }
@@ -467,7 +595,12 @@ img {
   margin-left: 123px;
   margin-top: 36px;
 
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 
   outline: yellow;
@@ -575,6 +708,53 @@ img {
   margin-right: 7px;
 }
 
+/* Фильтры*/
+
+.filter {
+  background-color: #b2b2b2;
+  background-image: url("../img/filter-background.jpg");
+  width: 1200px;
+}
+
+.filter-form {
+  width: 1056px;
+  padding: 30px 0;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #ffffff;
+}
+
+.filter-type,
+.hotel-type {
+  width: 240px;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.filter-range {
+  width: 328px;
+  margin-left: auto;
+  border: none;
+}
+
+
+.filter-result {
+  width: 1056px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.filter-result-variation {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; /*Веременно*/
+}
 
 /* Отели сетка*/
 
@@ -586,10 +766,13 @@ img {
   /*padding: 30px 73px;
   display: flex;*/
   padding: 30px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   border-bottom: 1px solid #e5e5e5;
   width: 1056px;
   margin: 0 auto;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 
   border-bottom: 1px solid #e5e5e5;
@@ -604,13 +787,22 @@ img {
 }
 
 .hotel-description {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
   /*min-width: 400px;
   margin-right: 88px;*/
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   width: 265px;
   min-height: 90px;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   outline: 1px solid aquamarine;
 }
@@ -638,7 +830,7 @@ img {
 }
 
 .price {
- margin-left: 6px;
+  margin-left: 6px;
   width: 142px;
   text-align: left;
 }
@@ -658,14 +850,62 @@ img {
   width: 112px;
   position: relative;
 
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 
   outline: 1px solid crimson;
 }
 
-.four-stars::before {
+.stars {
+  height: 17px;
+  background-image: url(../img/star.svg);
+  background-repeat: space no-repeat;
+  align-self: flex-end;
+}
+
+.four-stars {
+  width: 89px;
+}
+
+.three-stars {
+  width: 65px;
+}
+
+.two-stars {
+  width: 41px;
+}
+
+/* Запасной вариаант .stars {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.star {
+  background-image: url(../img/star.svg);
+  background-repeat: no-repeat;
+  width: 18px;
+  height: 17px;
+  padding-right: 4px;
+  margin-top: 2px;
+}*/
+
+
+
+/*.four-stars::before {
   content: "";
 
   position: absolute;
@@ -702,13 +942,10 @@ img {
   height: 20px;
   background-position: 72px 0, 95px 0;
   background-repeat: no-repeat, no-repeat, no-repeat;
-}
+}*/
+
+
 /*
-.stars {
-  background-image: url("../img/star.svg");
-  background-repeat: repeat;
-  align-self: flex-end;
-}
 .four-stars {
   width: 72px;
   height: 17px;
@@ -725,6 +962,7 @@ img {
 }
 */
 .rate {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 3px 0;
   margin: auto 0 0;
@@ -735,8 +973,8 @@ img {
 /* Временные настройки для фильтра*/
 
 .filter-range {
-  width: 330px;
-  margin: 50px auto;
+  width: 328px;
+  margin-left: auto;
 }
 
 .price-controls {
@@ -757,7 +995,9 @@ img {
   width: 2px;
   height: 22px;
 
-  background: #669ebf;
+  background: #ffffff;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
@@ -787,15 +1027,14 @@ img {
 
 .range-controls .scale {
   height: 2px;
-
-  background: rgba(000, 000, 255, 0.3);
+  background: #8c8080;
 }
 
 .range-controls .bar {
   width: 80%;
   height: 2px;
 
-  background: #503e32;
+  background: #ffffff;
 }
 
 .range-toggle {
@@ -806,8 +1045,9 @@ img {
   height: 4px;
 
   background: #ababab;
-  border: 8px solid deepskyblue;
+  border: 8px solid #ffffff;
   border-radius: 50%;
+  -webkit-box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
   box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
   cursor: pointer;
 }
