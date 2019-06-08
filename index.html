@@ -35,32 +35,33 @@
 
   <section class="reasons-row first-row">
     <div class="reason-first">
-      <h2>Настоящий городок</h2>
+      <h2 class="reason-title">Настоящий городок</h2>
         <span>— №1 —</span>
         <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
     </div>
+    <div class="reason-picture"></div>
   </section>
 
   <section class="features">
     <ul class="features-list">
-      <li>
-         <b>Жильё</b>
-        <span>Рекомендуем пожить в настоящем мотеле, всё как в кино!</span>
+      <li class="feature-item feature-item-house">
+         <h2 class="feature-title">Жильё</h2>
+        <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
       </li>
-      <li>
-        <b>Еда</b>
-        <span>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</span>
+      <li class="feature-item feature-item-food">
+        <h2 class="feature-title">Еда</h2>
+        <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
       </li>
-      <li>
-        <b>Сувениры</b>
-        <span>Не только китайского, но и местного производства!</span>
+      <li class="feature-item feature-item-gifts">
+        <h2 class="feature-title">Сувениры</h2>
+        <p>Не только китайского, но и местного производства!</p>
       </li>
     </ul>
   </section>
 
   <section class="reasons-row second-row">
     <div class="reason-second">
-      <h2>Там есть Мост дьявола</h2>
+      <h2>Там есть<br> Мост дьявола</h2>
         <span>— №2 —</span>
         <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
     </div>
@@ -93,8 +94,8 @@
       и мы покажем вам лучшие предложения гостиниц в седоне</p>
     </div>
     <div class="booking-wrap">
-      <h2 class="booking-search">Поиск гостиниц в Седоне</h2>
-    <form class="booking-form" action="https://echo.htmlacademy.ru" method="post">
+    <a  href="form.html" class="booking-search">Поиск гостиниц в Седоне</a>
+    <form class="booking-form booking-form-visible" action="https://echo.htmlacademy.ru" method="get">
       <div class="booking-item">
         <label for="check-in-date">
           Дата заезда:
@@ -141,7 +142,9 @@
       <button class="button search-button" type="submit">Найти</button>
     </form>
     </div>
+    <section class="map">
   <img src="img/map.jpg" width="1200" height="474"  alt="карта">
+  </section>
   </section>
 </main>
 

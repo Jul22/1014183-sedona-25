@@ -122,11 +122,11 @@ img {
 .site-navigation a:active {
   color: #cacaca;
 }
-/*
-.site-navigation a:visited {
-  color: #766354;
+
+.site-navigation-current a {
+  color: #766357;
 }
-*/
+
 .promo {
   display: block;
   height: 509px;
@@ -170,7 +170,7 @@ img {
 
 /* Первый ряд*/
 
-.first-row {
+/*.first-row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -190,12 +190,48 @@ img {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 400px;
+}*/
+
+.first-row {
+  display: flex;
+  background-color: #81b3d2;
+  color: #ffffff;
+  text-align: center;
+}
+
+.reason-picture {
+  background-image: url(../img/banner1.jpg);
+  background-repeat: no-repeat;
+  width: 800px;
+  height: 256px;
+}
+
+.reason-first {
+  width: 400px;
+  padding-top: 42px;
+  display: flex;
+  flex-direction: column;
+}
+
+.reason-title {
+  margin: 0;
+  width: 125px;
+  align-self: center;
+  margin-bottom: 18px;
+}
+
+.reason-first span {
+  display: block;
+  margin-bottom: 17px;
+}
+
+.reason-first p {
+  margin: 0;
+  width: 285px;
+  align-self: center;
 }
 
 /* Второй ряд */
-.features {
-  height: 330px; /*Временно*/
-}
 
 .features-list {
   display: -webkit-box;
@@ -208,8 +244,9 @@ img {
 
 }
 
-.features-list li {
+.feature-item {
   width: 400px;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -218,6 +255,50 @@ img {
   -ms-flex-direction: column;
   flex-direction: column;
   text-align: center;
+
+  padding-top: 160px;
+}
+
+.feature-item-house::before,
+.feature-item-food::before,
+.feature-item-gifts::before {
+  content: "";
+
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  width: 75px;
+  height: 75px;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  transform: translateX(-50%);
+}
+
+.feature-item-house::before {
+  background-image: url("../img/icon-1.svg");
+
+}
+
+.feature-item-food::before {
+  background-image: url("../img/icon-3.svg");
+
+}
+
+.feature-item-gifts::before {
+  background-image: url("../img/icon-2.svg");
+
+}
+
+.feature-title {
+  padding: 0 164px;
+  margin: 0;
+  margin-bottom: 22px;
+}
+
+.feature-item p {
+  padding: 0 73px;
+  margin: 0;
+  margin-bottom: 71px;
 }
 
 /* Третий ряд*/
@@ -306,15 +387,19 @@ img {
 }
 
 .booking-form {
+  display: none;
   position: absolute;
   padding: 55px;
   width: 568px;
   background-color: #ffffff;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  height: 396px;
 
   outline: 1px solid crimson;
+}
+
+.booking-form-visible {
+  display: block;
 }
 
 .booking-item {
@@ -323,19 +408,34 @@ img {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  margin-bottom: 30px;
-  padding: 10px 0;
+  margin-bottom: 29px;
 
   outline: 1px solid green;
 }
 
+.booking-item:last-of-type {
+  margin-bottom: 55px;
+}
+
 .booking-item label {
-  width: 113px;
+  display: inline-block;
+  width: 95px;
+  padding-top: 6px;
+  padding-right: 19px;
+
   font-weight: bold;
   text-align: center;
   vertical-align: middle;
-  display: inline-block;
-  padding-top: 10px;
+}
+
+label.label-adults {
+  width: 73px;
+  margin-right: 19px;
+}
+
+label.label-children {
+  width: 40px;
+  margin-right: 5px;
 }
 
 .booking-item input[type="text"] {
@@ -367,15 +467,14 @@ img {
 .booking-item .calendar {
   display: block;
   position: absolute;
-  top: 10px;
-  right: 0;
+  top: 9px;
+  right: 7px;
   background-color: #f2f2f2;
 
   outline: none;
   border: none;
   width: 20px;
   height: 20px;
-  margin: 8px 9px 0 316px;
 }
 
 .calendar svg {
@@ -399,8 +498,14 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  outline: 1px solid dodgerblue;
+
   position: relative;
+
+  outline: 1px solid dodgerblue;
+}
+
+.booking-item-control:first-of-type {
+  margin-right: 55px;
 }
 
 .booking-item input {
@@ -503,8 +608,8 @@ img {
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
-  height: 58px;
-  /*padding: 17px 196px;*/
+
+  padding: 17px 0;
 }
 .search-button:active {
   background-color: #5596be;
@@ -553,25 +658,32 @@ img {
   color: #000000;
 }
 /* Футер */
+
+
 .main-footer {
-  width: 1200px;
   margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  padding: 34px 0 47px 0;
+  width: 1200px;
+  /*position: absolute;
+  opacity: 0.81;
+  transform: translateY(-128px);*/
+
+
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
+
+
   background-color: #ffffff;
-  /*outline: 1px solid forestgreen;*/
 
 }
 
+
 .instagram {
-  width: 328px;
+  margin-right: 249px;
+  padding-left: 132px;
+  width: 142px;
+
   outline: 1px solid mediumvioletred;
-  margin-left: 73px;
-  margin-top: 49px;
 }
 
 .hashtag {
@@ -579,21 +691,26 @@ img {
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
+  display: block;
 }
 
 .social-footer {
+  margin-right: 227px;
   text-align: center;
-  min-width: 489px;
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
+  width: 151px;
+
   outline: 1px solid palevioletred;
 }
 
+.social-footer ul {
+  list-style: none;
+
+  outline: yellow;
+}
+
 .social-items {
+  margin: 0;
   padding: 0;
-  margin-left: 123px;
-  margin-top: 36px;
 
   display: -webkit-box;
 
@@ -603,6 +720,8 @@ img {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 
+  justify-content: center;
+
   outline: yellow;
 }
 
@@ -610,6 +729,9 @@ img {
   position: relative;
   background-color: #81b3d2;
   color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .social-button:hover {
   background-color: #669ec0;
@@ -668,23 +790,29 @@ img {
 
 .social-items a {
   display: block;
-  margin-right: 6px;
   width: 46px;
   height: 48px;
 }
 
-.footer-copyright {
-  text-align: right;
-  width: 241px;
-  margin-right: 73px;
-  margin-top: 39px;
+.social-items li:not(:last-child){
+  margin-right: 6px;
+}
 
+.footer-copyright {
+  margin: 0;
+  padding-right: 101px;
+  width: 198px;
+
+
+  display: flex;
+  align-items: center;
+
+  text-align: right;
   outline: 1px solid darkred;
 }
 
-
-.social-footer ul {
-  list-style: none;
+.footer-copyright span {
+  margin-right: 7px;
 }
 
 .search-button:hover {
@@ -704,9 +832,6 @@ img {
   fill: #bdbbbc;
 }
 
-.footer-copyright span {
-  margin-right: 7px;
-}
 
 /* Фильтры*/
 
