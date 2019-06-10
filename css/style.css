@@ -664,17 +664,17 @@ label.label-children {
   margin: 0 auto;
   padding: 34px 0 47px 0;
   width: 1200px;
-  /*position: absolute;
-  opacity: 0.81;
-  transform: translateY(-128px);*/
-
 
   display: flex;
   align-items: center;
 
-
   background-color: #ffffff;
+}
 
+.footer-index-page {
+  position: absolute;
+  opacity: 0.81;
+  transform: translateY(-128px);
 }
 
 
