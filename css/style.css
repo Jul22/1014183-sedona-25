@@ -233,6 +233,9 @@ img {
 
 /* Второй ряд */
 
+.features {
+  margin-bottom: 79px;
+}
 .features-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -290,15 +293,13 @@ img {
 }
 
 .feature-title {
-  padding: 0 164px;
   margin: 0;
-  margin-bottom: 22px;
+  margin-bottom: 16px;
 }
 
 .feature-item p {
-  padding: 0 73px;
+  padding: 0 48px;
   margin: 0;
-  margin-bottom: 71px;
 }
 
 /* Третий ряд*/
@@ -313,15 +314,13 @@ img {
   background-image: url("../img/banner2.jpg");
   background-repeat: no-repeat;
   background-position: left;
-  min-height: 256px;
 }
 
 .reason-second {
   background-color: #81b3d2;
   color: #ffffff;
-  padding: 46px 60px 64px;
+  padding: 25px 42px 41px;
   text-align: center;
-  height: 256px;
   display: block;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -329,15 +328,46 @@ img {
 
 }
 
+.reason-second p {
+  margin: 0;
+  padding: 14px 0;
+}
+
 .last-row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 256px;              /*Временоно*/
   background-color: #eee;
 }
 
+.reasons-last-row {
+  width: 400px;
+  min-height: 256px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
 
+.reasons-last-row h2 {
+  margin-top: 0;
+  width: 118px;
+  align-self: center;
+  margin-bottom: 18px;
+  padding: 43px 56px 0;
+}
+
+.reasons-last-row span {
+  margin-bottom: 16px;
+}
+
+.reasons-last-row p {
+  margin: 0;
+  padding: 0 68px;
+}
+
+.reasons-last-row:last-of-type p {
+  padding: 0 74px;
+}
 
 /* Форма */
 .booking {
@@ -398,8 +428,21 @@ img {
   outline: 1px solid crimson;
 }
 
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
 .booking-form-visible {
   display: block;
+  animation: opacity 0.8s;
 }
 
 .booking-item {
@@ -648,6 +691,14 @@ label.label-children {
 }
 
 
+.map {
+  background-image: url("../img/map.jpg");
+  background-color: #dfe9cd;
+  background-repeat: no-repeat;
+  width: 1200px;
+  height: 593px;
+}
+
 /* Inner page */
 .hotel-name {
   font-size: 21px;
@@ -662,7 +713,7 @@ label.label-children {
 
 .main-footer {
   margin: 0 auto;
-  padding: 34px 0 47px 0;
+  padding: 44px 0 47px 0;
   width: 1200px;
 
   display: flex;
