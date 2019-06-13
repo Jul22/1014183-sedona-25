@@ -1,14 +1,16 @@
 var link = document.querySelector(".booking-search");
-var popup = document.querySelector(".booking-form-visible");
+
 var form = document.querySelector(".booking-form");
 var checkIn = form.querySelector("#check-in-date");
 var checkOut = form.querySelector("#check-out-date");
 var children = form.querySelector("#children");
 var adults = form.querySelector("#adults");
 
+form.classList.remove("booking-form-visible");
+
 link.addEventListener("click", function(evt) {
   evt.preventDefault();
-  popup.classList.toggle("booking-form-visible");
+  form.classList.toggle("booking-form-visible");
 });
 
 form.addEventListener("submit", function (evt) {
