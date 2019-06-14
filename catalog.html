@@ -41,7 +41,7 @@
         </div>
       </fieldset>
   <fieldset class="hotel-type">
-    <legend class="filter-title">ТИП ЖИЛЬЯ</legend>
+    <legend class="filter-title">ТИП ЖИЛЬЯ:</legend>
     <div class="filter-line">
     <input type="checkbox" id="hotel" checked>
     <label for="hotel">ГОСТИНИЦА</label>
@@ -78,19 +78,25 @@
    <h2>НАЙДЕНО: 3</h2>
  </div>
   <div class="filter-result-list">
-    <span>СОРТИРОВКА</span>
+    <span>СОРТИРОВКА:</span>
   <ul class="filter-result-variation">
-    <li><a href="#">ПО ЦЕНЕ</a></li>
+    <li><a href="#" class="active">ПО ЦЕНЕ</a></li>
     <li><a href="#">ПО ТИПУ</a></li>
     <li><a href="#">ПО РЕЙТИНГУ</a></li>
   </ul>
   </div>
   <div class="filter-controls">
-    <span><a href="#" class="filter-controls-btn up">ВВЕРХ</a></span>
-    <span><a href="#" class="filter-controls-btn down">ВНИЗ</a></span>
+    <a href="#" class="filter-controls-btn up"><span class="visually-hidden">ВВЕРХ</span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+        <path fill="#231F20" d="M5.5 0L0 10h11z"/></svg>
+    </a>
+    <a href="#" class="filter-controls-btn down active"><span class="visually-hidden">ВНИЗ</span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+        <path fill="#231F20" d="M5.5 10L0 0h11"/></svg>
+    </a>
   </div>
 </section>
-  <section class="hotels hotel-border-top">
+  <section class="hotels">
      <div class="hotel-photo">
       <a href="#">
       <img src="img/amara.jpg" width="135" height="90" alt="фотография отеля 1">
@@ -98,11 +104,11 @@
      </div>
     <div class="hotel-description">
       <h2 class="hotel-name"><a href="#">Amara Resort & Spa</a></h2>
-      <div class="wrap-one">
+      <div class="hotel-price-wrap">
       <span class="hotel-information">Гостиница</span>
         <span class="price">От 4000 р.</span>
       </div>
-        <div class="wrap-two">
+        <div class="hotel-booking-wrap">
         <a href="#" class="button booking-btn-control">Подробнее</a>
         <a href="#" class="button booking-btn booking-btn-control">Забронировать</a>
          </div>
@@ -126,11 +132,11 @@
     </div>
     <div class="hotel-description">
       <h2 class="hotel-name"><a href="#">Desert Quail Inn</a></h2>
-      <div class="wrap-one">
+      <div class="hotel-price-wrap">
       <span class="hotel-information">Мотель</span>
       <span class="price">От 3000 р.</span>
     </div>
-      <div class="wrap-two">
+      <div class="hotel-booking-wrap">
       <a href="#" class="button booking-btn-control">Подробнее</a>
       <a href="#" class="button booking-btn booking-btn-control">Забронировать</a>
     </div>
@@ -153,11 +159,11 @@
     </div>
     <div class="hotel-description">
       <h2 class="hotel-name"><a href="#">Villas At Poco Diablo</a></h2>
-      <div class="wrap-one">
+      <div class="hotel-price-wrap">
       <span class="hotel-information">Апартаменты</span>
       <span class="price">От 2000 р.</span>
     </div>
-      <div class="wrap-two">
+      <div class="hotel-booking-wrap">
       <a href="#" class="button booking-btn-control">Подробнее</a>
       <a href="#" class="button booking-btn booking-btn-control">Забронировать</a>
     </div>
