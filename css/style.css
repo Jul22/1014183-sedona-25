@@ -435,7 +435,6 @@ img {
 }
 
 .booking-form {
-  display: none;
   position: absolute;
   padding: 55px;
   width: 568px;
@@ -462,7 +461,6 @@ img {
 
 
 .booking-form-visible {
-  display: block;
 
   transform: translateY(0%);
   transition: all 0.3S;
