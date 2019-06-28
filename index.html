@@ -24,10 +24,7 @@
     </nav>
   </header>
   <main class="characters">
-    <div class="promo">
-      <div class="promo-bottom"></div>
-    </div>
-
+    <div class="promo"></div>
     <h1 class="title">Седона — небольшой городок в Аризоне,
       заслуживающий большего!</h1>
     <p class="reasons">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
@@ -94,12 +91,13 @@
       </div>
       <div class="booking-wrap">
         <a href="form.html" class="booking-search">Поиск гостиницы в Седоне</a>
-        <form class="booking-form booking-form-visible" action="https://echo.htmlacademy.ru" method="get">
+        <form class="booking-form" action="https://echo.htmlacademy.ru" method="get">
           <div class="booking-item">
             <label for="check-in-date">
               Дата заезда:
             </label>
-            <input type="text" name="check-in-date" id="check-in-date" value="" placeholder="24 апреля 2017">
+            <input type="text" class="check-in-date booking-input-text" name="check-in-date" id="check-in-date" value=""
+                   placeholder="24 апреля 2017">
             <button type="button" class="calendar" aria-label="Календарь">
               <svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewBox="0 0 21 22">
                 <path
@@ -113,7 +111,8 @@
             <label for="check-out-date">
               Дата выезда:
             </label>
-            <input type="text" name="check-out-date" id="check-out-date" value="" placeholder="4 июля 2017">
+            <input type="text" class="check-out-date booking-input-text" name="check-out-date" id="check-out-date"
+                   value="" placeholder="4 июля 2017">
             <button type="button" class="calendar" aria-label="Календарь">
               <svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewBox="0 0 21 22">
                 <path
@@ -123,34 +122,29 @@
               </svg>
             </button>
           </div>
-          <div class="booking-item">
-            <label for="adults" class="label-adults">
-              Взрослые:
-            </label>
-            <div class="booking-item-control">
-              <button class="control-btn btn-reduce" type="button" onclick="this.nextElementSibling.stepDown()"
-                      aria-label="уменьшить">
+          <div class="booking-item-wrapper">
+            <div class="booking-item">
+              <label for="adults" class="label-adults">
+                Взрослые:
+              </label>
+              <button class="control-btn btn-reduce" type="button" aria-label="уменьшить">
                 <span class="visually-hidden">Минус</span>
               </button>
-              <input type="number" name="adults" id="adults" readonly class="control-count" min="1" max="9" value=""
-                     placeholder="2">
-              <button class="control-btn btn-increase" type="button" onclick="this.previousElementSibling.stepUp()"
-                      aria-label="добавить">
+              <input type="text" class="adults booking-input-number" name="adults" id="adults" value="" placeholder="2">
+              <button class="control-btn btn-increase" type="button" aria-label="добавить">
                 <span class="visually-hidden">Плюс</span>
               </button>
             </div>
-            <label for="children" class="label-children">
-              Дети:
-            </label>
-            <div class="booking-item-control">
-              <button class="control-btn btn-reduce" type="button" onclick="this.nextElementSibling.stepDown()"
-                      aria-label="уменьшить">
+            <div class="booking-item">
+              <label for="children" class="label-children">
+                Дети:
+              </label>
+              <button class="control-btn btn-reduce" type="button" aria-label="уменьшить">
                 <span class="visually-hidden">Минус</span>
               </button>
-              <input type="number" name="children" id="children" readonly class="control-count" min="0" max="9" value=""
+              <input type="text" class="children booking-input-number" name="children" id="children" value=""
                      placeholder="0">
-              <button class="control-btn btn-increase" type="button" onclick="this.previousElementSibling.stepUp()"
-                      aria-label="добавить">
+              <button class="control-btn btn-increase" type="button" aria-label="добавить">
                 <span class="visually-hidden">Плюс</span>
               </button>
             </div>

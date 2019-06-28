@@ -1,21 +1,25 @@
-var link = document.querySelector(".booking-search");
+var bookingLink = document.querySelector(".booking-search");
+var bookingForm = document.querySelector(".booking-form");
+var checkIn = document.querySelector("#check-in-date");
+var checkOut = document.querySelector("#check-out-date");
+var adults = document.querySelector("#adults");
 
-var script = document.querySelector(".booking-form");
-var checkIn = script.querySelector("#check-in-date");
-var checkOut = script.querySelector("#check-out-date");
-var children = script.querySelector("#children");
-var adults = script.querySelector("#adults");
+bookingForm.classList.add("hidden");
 
-script.classList.remove("booking-form-visible");
-
-link.addEventListener("click", function(evt) {
+bookingLink.addEventListener("click", function (evt) {
   evt.preventDefault();
-  script.classList.toggle("booking-form-visible");
-});
+  bookingForm.classList.toggle("hidden");
+  bookingForm.classList.toggle("opening");
+})
 
-script.addEventListener("submit", function (evt) {
-  if (!checkIn.value || !checkOut.value || !children.value ||!adults.value) {
+bookingForm.addEventListener("submit", function (evt) {
+  if (!checkIn.value || !checkOut.value || !adults) {
     evt.preventDefault();
-    script.classList.add("booking-error");
+    bookingLink.addEventListener("click", function (evt) {
+      evt.preventDefault();
+    });
+    checkIn.classList.add("error");
+    checkOut.classList.add("error");
+    adults.classList.add("error");
   }
 });
