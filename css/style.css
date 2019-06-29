@@ -162,12 +162,13 @@ img {
 
 .reasons {
   margin: 0;
-  padding: 0 355px 50px;
+  padding: 0 351px 50px;
 
   text-align: center;
 }
 
 /* Первый ряд*/
+
 .first-row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -437,6 +438,7 @@ img {
   z-index: 2;
 
   background: #ffffff;
+
   text-align: center;
 }
 
@@ -574,7 +576,7 @@ img {
   top: 9px;
   right: 10px;
 
-  background-color: #f2f2f2;
+  background-color: transparent;
 
   outline: none;
   border: none;
@@ -713,7 +715,7 @@ img {
 }
 
 .booking-search:hover,
-.booking-btn:hover:hover {
+.booking-btn:hover {
   background-color: #604e44;
 }
 
@@ -970,12 +972,13 @@ img {
   background-size: contain;
 }
 
-.filter-form input[type="checkbox"]:disabled + label::before {
-  color: #6a6a6a
+.filter-form input[type="checkbox"]:disabled + label{
+  opacity: 0.3;
 }
 
-.filter-form input[type="checkbox"]:checked:disabled + label::before {
-  color: #6a6a6a
+.filter-form label:hover,
+.filter-form input:focus {
+  opacity: 0.8;
 }
 
 .filter-type,
@@ -1112,6 +1115,7 @@ img {
 }
 
 /* Отели сетка*/
+
 .hotels {
   padding: 0 72px 30px;
   width: 1200px;
@@ -1205,7 +1209,7 @@ img {
 
 .stars {
   height: 17px;
-  margin-bottom: 50px;
+  margin-bottom: 49px;
   -ms-flex-item-align: end;
   align-self: flex-end;
 
@@ -1226,7 +1230,7 @@ img {
 }
 
 .rate {
-  padding: 0;
+  padding: 2px 0;
   margin: 0;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -1285,8 +1289,12 @@ img {
 }
 
 .price-controls label {
+  height: 24px;
+  line-height: 21px;
+
   display: inline-block;
   vertical-align: middle;
+  align-items: center;
   cursor: pointer;
 }
 

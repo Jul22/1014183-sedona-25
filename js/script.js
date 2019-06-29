@@ -13,13 +13,25 @@ bookingLink.addEventListener("click", function (evt) {
 })
 
 bookingForm.addEventListener("submit", function (evt) {
-  if (!checkIn.value || !checkOut.value || !adults) {
+  if (!checkIn.value || !checkOut.value || !adults.value) {
     evt.preventDefault();
-    bookingLink.addEventListener("click", function (evt) {
-      evt.preventDefault();
-    });
-    checkIn.classList.add("error");
-    checkOut.classList.add("error");
-    adults.classList.add("error");
+
+    if (!checkIn.value) {
+      checkIn.classList.add("error");
+    }
+
+    if (!checkOut.value) {
+      checkOut.classList.add("error");
+    }
+
+    if (!adults.value) {
+      adults.classList.add("error");
+    }
+
+    setTimeout(function () {
+      checkIn.classList.remove("error");
+      checkOut.classList.remove("error");
+      adults.classList.remove("error");
+    }, 900);
   }
 });
